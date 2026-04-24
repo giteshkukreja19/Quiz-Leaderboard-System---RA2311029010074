@@ -50,4 +50,18 @@ Total Score: 2290
 ```
 
 ---
+
+## API Endpoints Used
+
+**GET Messages:**
+```
+/quiz/messages?regNo=RA2311029010074&poll=0-9
+```
+
+**POST Submission:**
+```
+/quiz/submit
+```
+
+---
 **Author**: Gitesh Kukreja (RA2311029010074)
