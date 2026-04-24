@@ -40,6 +40,11 @@ public class QuizLeaderboardApp {
                     continue;
                 }
 
+                if (response.body() == null || response.body().isEmpty()) {
+                    System.out.println("Poll " + poll + " returned empty body. Skipping...");
+                    continue;
+                }
+
                 List<String[]> events = parseEvents(response.body());
 
                 for (String[] event : events) {
@@ -54,7 +59,7 @@ public class QuizLeaderboardApp {
                     }
                 }
 
-                System.out.println("Poll " + poll + " processed.");
+                System.out.println("Poll " + poll + " completed successfully.");
 
             } catch (Exception e) {
                 System.out.println("Error in poll " + poll + ": " + e.getMessage());
